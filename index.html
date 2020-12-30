@@ -7,42 +7,74 @@
     <title>Tugas Besar</title>
 
     <style>
+      @font-face {
+    font-family: 'Lato';
+    src: url(assets/font/Lato-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+      
       #navbar {
         background-color: #e20c0c;
       }
+
+     footer {
+       background-color: #e20c0c;
+     }
+
+     .jumbotron {
+       background-color: #e20c0c;
+     }
+
+     #card-body {
+      background-color: #e20c0c;
+     }
+
+     .btn {
+      background-color: #e20c0c;
+     }
+
+     body {
+       background-color: #E4F9FF;
+       font-family: "Lato";
+     }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark" id=navbar>
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">UNIQLO</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
+
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark" id="navbar">
+    <a class="navbar-brand" href="https://www.uniqlo.com/id/" target="_blank">
+      <img src="assets/img/logo.png" width="40" height="40" alt="" loading="lazy">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Informasi Perusahaan</a>
+                <a class="nav-link" href="#about">Informasi Perusahaan</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Lokasi Toko</a>
+                <a class="nav-link" href="#lokasi">Lokasi Toko</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
                   Produk
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">Atasan Pria</a></li>
-                    <li><a class="dropdown-item" href="#">Bawahan Pria</a></li>
-                    <li><a class="dropdown-item" href="#">Atasan Wanita</a></li>
-                    <li><a class="dropdown-item" href="#">Bawahan Wanita</a></li>
+                    <li><a class="dropdown-item" href="#atasanpria">Atasan Pria</a></li>
+                    <li><a class="dropdown-item" href="#bawahanpria">Bawahan Pria</a></li>
+                    <li><a class="dropdown-item" href="#atasanwanita">Atasan Wanita</a></li>
+                    <li><a class="dropdown-item" href="#bawahanwanita">Bawahan Wanita</a></li>
                   </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Kontak</a>
+                <a class="nav-link" href="#kontak">Kontak</a>
               </li>
             </ul>
           </div>
@@ -50,85 +82,428 @@
       </nav>
 
       <!-- Slide -->
+      <section id="slide" class="slide mb-4 pt-5">
       <div class="container">
-      <div id="carouselExampleCaptions" class="carousel slide mt-4" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="assets/img/slide1.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Limited Offer</h5>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <div id="carouselExampleCaptions" class="carousel slide mt-4" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/img/slide1.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Limited Offer</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/slide2.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Limited Offer</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/slide3.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Limited Offer</h5>
+              </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <img src="assets/img/slide2.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Limited Offer</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="assets/img/slide3.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Limited Offer</h5>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-            </div>
-          </div>
+          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
-      </div>
-      
-      <div class="container mt-2">
+      </section>
+
+
+      <!-- atasan pria -->
+      <section id="atasanpria" class="atasanpria mb-5">
+        <div class="container">
+          <div class="row pt-4 mb-4">
+            <div class="col text-center">
+              <h2>Atasan Pria</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="card shadow-lg p-3 mb-5 bg-light" style="width: 300px;">
+                <img src="assets/img/atasanpria1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">SWEATER Mickey x Keith LENGAN PANJANG</p>
+                  <p>Rp. 299000</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-lg p-3 mb-5 bg-light" style="width: 300px;">
+                <img src="assets/img/atasanpria2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">KEMEJA FLANNEL KOTAK LENGAN PANJANG</p>
+                  <p>Rp. 199000</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-lg p-3 mb-5 bg-light" style="width: 300px;">
+                <img src="assets/img/atasanpria3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">T-SHIRT CREW NECK LENGAN PENDEK</p>
+                  <p>Rp. 149000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- bawahan pria -->
+        <section id="bawahanpria" class="bawahanpria mb-5 pt-4">
+          <div class="container">
+            <div class="row pt-4 mb-4">
+              <div class="col text-center">
+                <h2>Bawahan Pria</h2>
+              </div>
+            </div>
         <div class="row">
           <div class="col">
             <div class="card shadow-lg p-3 mb-5 bg-light" style="width: 300px;">
-              <img src="assets/img/produk1.jpg" class="card-img-top" alt="...">
-            </div>
+              <img src="assets/img/bawahanpria1.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">JEANS SKINNY FIT ULTRA STRETCH WARNA</p>
+                <p>Rp. 399000</p>
+              </div>
+          </div>
           </div>
           <div class="col">
             <div class="card shadow-lg p-3 mb-5 bg-light" style="width: 300px;">
-              <img src="assets/img/produk2.jpg" class="card-img-top" alt="...">
-            </div>
+              <img src="assets/img/bawahanpria2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">CELANA EZY ANKLE (Ultra stretch DRY EX)</p>
+                <p>Rp. 499000</p>
+              </div>
+          </div>
           </div>
           <div class="col">
             <div class="card shadow-lg p-3 mb-5 bg-light" style="width: 300px;">
-              <img src="assets/img/produk3.jpg" class="card-img-top" alt="...">
-            </div>
+              <img src="assets/img/bawahanpria3.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">CELANA PENDEK CHINO</p>
+                <p>Rp. 299000</p>
+              </div>
+          </div>
           </div>
         </div>
+      </section>
+              <!-- Atasan wanita -->
+              <section id="atasanwanita" class="atasanwanita mb-5 pt-4">
+                <div class="container">
+                  <div class="row pt-4 mb-4">
+                    <div class="col text-center">
+                      <h2>Atasan Wanita</h2>
+                    </div>
+                  </div>
+              <div class="row">
+                <div class="col">
+                  <div class="card shadow-lg p-3 mb-5 bg-light" style="width: 300px;">
+                    <img src="assets/img/atasanwanita1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">WOMEN SWEAT HOODIE PEANUTS LENGAN PANJANG</p>
+                      <p>Rp. 399000</p>
+                    </div>
+                </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-lg p-3 mb-5 bg-light" style="width: 300px;">
+                    <img src="assets/img/atasanwanita2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">WOMEN KEMEJA LINEN BLEND KERAH SKIPPER</p>
+                      <p>Rp. 299000</p>
+                    </div>
+                </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-lg p-3 mb-5 bg-light" style="width: 300px;">
+                    <img src="assets/img/atasanwanita3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">WOMEN T-SHIRT CREW NECK LENGAN PENDEK</p>
+                      <p>Rp. 149000</p>
+                    </div>
+                </div>
+                </div>
+              </div>
+
+</section>
+        <!-- Bawahan Wanita -->
+        <section id="bawahanwanita" class="bawahanwanita mb-5 pt-4">
+          <div class="container">
+            <div class="row pt-4 mb-4">
+              <div class="col text-center">
+                <h2>Bawahan Wanita</h2>
+              </div>
+            </div>
         <div class="row">
           <div class="col">
             <div class="card shadow-lg p-3 mb-5 bg-light" style="width: 300px;">
-              <img src="assets/img/produk4.jpg" class="card-img-top" alt="...">
-            </div>
+              <img src="assets/img/bawahanwanita1.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">WOMEN JEANS ULTRA STRETCH</p>
+                <p>Rp. 499000</p>
+              </div>
+          </div>
           </div>
           <div class="col">
             <div class="card shadow-lg p-3 mb-5 bg-light" style="width: 300px;">
-              <img src="assets/img/produk5.jpg" class="card-img-top" alt="...">
-            </div>
+              <img src="assets/img/bawahanwanita2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">WOMEN CELANA SMART MATERNITY ANKLE</p>
+                <p>Rp. 599000</p>
+              </div>
+          </div>
           </div>
           <div class="col">
             <div class="card shadow-lg p-3 mb-5 bg-light" style="width: 300px;">
-              <img src="assets/img/produk6.jpg" class="card-img-top" alt="...">
+              <img src="assets/img/bawahanwanita3.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">WOMEN CELANA PENDEK TUCK</p>
+                <p>Rp. 299000</p>
+              </div>
+          </div>
+          </div>
+        </div>
+    </div>
+    </section>
+        <!-- Bawahan Wanita -->
+        <section id="bawahanwanita" class="bawahanwanita mb-5 pt-4">
+          <div class="container">
+            <div class="row pt-4 mb-4">
+              <div class="col text-center">
+                <h2>Bawahan Wanita</h2>
+              </div>
             </div>
+        <div class="row">
+          <div class="col">
+            <div class="card shadow-lg p-3 mb-5 bg-light" style="width: 300px;">
+              <img src="assets/img/bawahanwanita1.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">WOMEN JEANS ULTRA STRETCH</p>
+                <p>Rp. 499000</p>
+              </div>
+          </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-lg p-3 mb-5 bg-light" style="width: 300px;">
+              <img src="assets/img/bawahanwanita2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">WOMEN CELANA SMART MATERNITY ANKLE</p>
+                <p>Rp. 599000</p>
+              </div>
+          </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-lg p-3 mb-5 bg-light" style="width: 300px;">
+              <img src="assets/img/bawahanwanita3.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">WOMEN CELANA PENDEK TUCK</p>
+                <p>Rp. 299000</p>
+              </div>
+          </div>
+          </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- about -->
+    <section id="about" class="about mb-5 pt-4">
+      <div class="container">
+      <div class="row pt-4 mb-4">
+        <div class="col text-center">
+          <h2>Informasi Perusahaan</h2>
+        </div>
+      </div>
+      <div class="jumbotron jumbotron-fluid text-light">
+          <h1 class="display-5 text-center">Tentang UNIQLO</h1>
+          <p class="lead">Uniqlo Co., Ltd. (株式会社ユニクロ Kabushiki-gaisha yunikuro) adalah perusahaan Jepang dalam bidang perencanaan produk, produksi, distribusi pakaian kasual. Perusahaan ini membuka toko eceran pakaian kasual dengan merek Uniqlo (ユニクロ). Kantor pusat Uniqlo di Sayama, Kota Yamaguchi, Prefektur Yamaguchi</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="jumbotron jumbotron-fluid text-light">
+          <h1 class="display-5 text-center">Sejarah UNIQLO</h1>
+          <p class="lead">Nama Uniqlo berasal dari nama toko pertama bernama Unique Clothing Warehouse yang dibuka Tadashi Yanai di Kota Hiroshima, Prefektur Hiroshima pada 2 Juni 1984. Konsep tokonya sebagai "sebuah gudang raksasa dengan pilihan konstan". Ide didapat Yanai ketika berkunjung ke Amerika Serikat. Ia mengunjungi koperasi universitas yang ramai dikunjungi remaja karena menjual pakaian kasual berharga murah seperti orang membeli majalah.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+    <table class="table table-bordered">
+      <thead class="thead-light">
+      <tr>
+      <td class="Tab">Nama Perusahaan</td>
+      <td class="Tab2">PT.FAST REALITING INDONESIA</td>
+      </tr>
+      <tr>
+          <td class="Tab">Tanggal Berdiri</td>
+          <td class="Tab2">16 Oktober 2012</td>
+      </tr>
+      <tr>
+          <td class="Tab">Lokasi</td>
+          <td class="Tab2">PT Fast Retailing Indonesia South Quarter Tower C, 17th Floor, Jl. R.A. Kartini Kav. 8 Cilandak, Jakarta Selatan, 12430</td>
+      </tr>
+      <tr>
+          <td class="Tab">Lini Bisnis</td>
+          <td class="Tab2">Retail pakaian brand kasual UNIQLO</td>
+      </tr>
+      <tr>
+          <td class="Tab">Jumlah Gerai</td>
+          <td class="Tab2">26 gerai (pada 31 Juli 2019)</td>
+      </tr>
+      </thead>
+  </table>
+  </div>
+
+
+  <!-- Lokasi -->
+  <section id="lokasi" class="lokasi mb-5 pt-4">
+    <div class="container">
+      <div class="row pt-4 mb-4">
+        <div class="col text-center">
+          <h2>Lokasi Toko</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+      <div class="card" style="width: 300px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.699484269506!2d107.63435771431713!3d-6.926479669720835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e71a0eea588f%3A0x787faa0a9b8ca886!2sUniqlo%20Trans%20Studio%20Mall%20Bandung!5e0!3m2!1sid!2sid!4v1609219256467!5m2!1sid!2sid" width="300px" height="300px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <p>Trans Studio Mall Bandung</p>
+              <p>Jl. Gatot Subroto No.289, Cibangkong, Kec. Batununggal, Kota Bandung, Jawa Barat 40273, Indonesia</p>  
+              </li>
+            <li class="list-group-item">
+              <p>Senin - Kamis</p>
+              <p>11:00 am – 8:00 pm</p>
+              <p>Jum'at-Minggu</p>
+              <p>10:00 am – 8:00 pm</p>
+            </li>
+            <li class="list-group-item">022 - 86012906</li>
+          </ul>
+        </div>
+      </div>
+      </div>
+  
+  
+      <div class="col">
+      <div class="card" style="width: 300px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.0056430910313!2d107.59343401431677!3d-6.889926369335118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e706fcedf73d%3A0x6649a4cd575a4a7f!2sUNIQLO%20PARIS%20VAN%20JAVA!5e0!3m2!1sid!2sid!4v1609242304178!5m2!1sid!2sid" width="300px" height="300px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <p>Paris Van Java, GL</p>
+              <p>Jl. Sukajadi no.131-139, Bandung, Jawa Barat, 40162</p>  
+              </li>
+            <li class="list-group-item">
+              <p>Senin-Kamis</p>
+              <p>10:00am - 8:00 pm</p>
+              <p>Jum'at-Minggu</p>
+              <p>10:00 am – 8:00 pm</p>
+            </li>
+            <li class="list-group-item">022 - 82063577</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col">
+      <div class="card" style="width: 300px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.78938246886!2d107.59226591431708!3d-6.915766369607622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e61658782a51%3A0xa0d67adfc17898d2!2sUniqlo%2023%20Paskal!5e0!3m2!1sid!2sid!4v1609242394796!5m2!1sid!2sid" width="300px" height="300px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <p>23 Paskal 2F</p>
+              <p>Komplek Paskal Hypersquare, Jl. Pasirkaliki Andir, Bandung, 40171, Indonesia</p>  
+              </li>
+            <li class="list-group-item">
+              <p>Senin - Kamis</p> 
+              <p>11:00 am – 8:00 pm</p>
+              <p>Jumat-Minggu</P>
+              <p>10:00 am – 8:00 pm</p>
+            </li>
+            <li class="list-group-item">022-20569269</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </section>
+  
+    <!-- Contact -->
+    <section id="kontak" class="kontak mb-5 pt-4">
+      <div class="container">
+        <div class="row pt-4 mb-4">
+          <div class="col text-center">
+            <h2>Kontak</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-4">
+            <div class="card text-white mb-3 text-center">
+              <div class="card-body" id="card-body">
+                <h5 class="card-title">Kontak</h5>
+                <p>Apabila anda memiliki keluhan silahkan isi form berikut</p>
+              </div>
+            </div>
+            <ul class="list-group">
+              <li class="list-group-item"><h1>Lokasi</h1></li>
+              <li class="list-group-item">PT Fast Retailing Indonesia</li>
+              <li class="list-group-item">South Quarter Tower C, 17th Floor, Jl. R.A. Kartini Kav. 8 Cilandak</li>
+              <li class="list-group-item">Jakarta Selatan</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <form>
+              <div class="form-group">
+                <label for="nama">Nama</label>
+                <input type="text" class="form-control" id="nama">
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="text" class="form-control" id="email">
+              </div>
+              <div class="form-group">
+                <label for="notelp">No Telpon</label>
+                <input type="text" class="form-control" id="notelp">
+              </div>
+              <div class="form-group">
+                <label for="pesan">Pesan</label>
+               <textarea name="pesan" id="pesan" class="form-control"></textarea>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn text-light">Kirim Pesan</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-
-
+    </section>
+    
+    <!-- footer -->
+    <footer class="text-white">
+      <div class="container">
+        <div class="row pt-3">
+          <div class="col text-center">
+            <p>Copyright 2020.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
 
 
