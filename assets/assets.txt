@@ -1,2 +1,3 @@
 Foto Produk: https://www.uniqlo.com/id/
 logo: https://en.wikipedia.org/wiki/Uniqlo
+Font:Lato(googlefont)
